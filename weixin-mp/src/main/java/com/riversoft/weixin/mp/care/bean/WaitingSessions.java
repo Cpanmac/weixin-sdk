@@ -16,6 +16,7 @@ public class WaitingSessions {
 
     /**
      * 总的未处理session数
+     * @return int
      */
     public int getCount() {
         return count;
@@ -27,6 +28,7 @@ public class WaitingSessions {
 
     /**
      * 只会返回前100个未处理session
+     * @return List
      */
     public List<Session> getSessions() {
         return sessions;

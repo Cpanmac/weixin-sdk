@@ -4,11 +4,10 @@ import com.riversoft.weixin.common.util.MD5;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.lang.annotation.Target;
 import java.security.MessageDigest;
 
 /**
- * @borball on 12/29/2016.
+ *  on 12/29/2016.
  */
 public class MD5Test {
 

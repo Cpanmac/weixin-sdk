@@ -281,7 +281,7 @@ public class Materials {
 
     /**
      * 删除永久素材
-     * @param mediaId
+     * @param mediaId mediaId
      */
     public void delete(String mediaId) {
         String url = WxEndpoint.get("url.material.delete");

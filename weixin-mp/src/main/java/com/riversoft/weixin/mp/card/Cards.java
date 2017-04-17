@@ -41,8 +41,8 @@ public class Cards {
     /**
      * 创建团购券
      *
-     * @param groupon
-     * @return
+     * @param groupon groupon
+     * @return String
      */
     public String groupon(Groupon groupon) {
         Card card = new Card();
@@ -55,8 +55,8 @@ public class Cards {
     /**
      * 创建代金券
      *
-     * @param cash
-     * @return
+     * @param cash cash
+     * @return String
      */
     public String cash(Cash cash) {
         Card card = new Card();
@@ -69,8 +69,8 @@ public class Cards {
     /**
      * 创建礼品券
      *
-     * @param gift
-     * @return
+     * @param gift gift
+     * @return String
      */
     public String gift(Gift gift) {
         Card card = new Card();
@@ -83,8 +83,8 @@ public class Cards {
     /**
      * 创建折扣券
      *
-     * @param discount
-     * @return
+     * @param discount discount
+     * @return String
      */
     public String discount(Discount discount) {
         Card card = new Card();
@@ -97,8 +97,8 @@ public class Cards {
     /**
      * 创建优惠券
      *
-     * @param coupon
-     * @return
+     * @param coupon coupon
+     * @return  String
      */
     public String coupon(Coupon coupon) {
         Card card = new Card();
@@ -140,7 +140,7 @@ public class Cards {
      *                   “CARD_STATUS_VERIFY_OK”，通过审核；
      *                   “CARD_STATUS_USER_DELETE”，卡券被用户删除；
      *                   “CARD_STATUS_USER_DISPATCH”，在公众平台投放过的卡券
-     * @return
+     * @return int
      */
     public int count(List<String> statusList) {
         Map<String, Object> request = new HashMap<>();
@@ -165,14 +165,14 @@ public class Cards {
     /**
      * 获取卡片列表
      *
-     * @param offset
-     * @param count
+     * @param offset offset
+     * @param count count
      * @param statusList “CARD_STATUS_NOT_VERIFY”,待审核；
      *                   “CARD_STATUS_VERIFY_FALL”,审核失败；
      *                   “CARD_STATUS_VERIFY_OK”，通过审核；
      *                   “CARD_STATUS_USER_DELETE”，卡券被用户删除；
      *                   “CARD_STATUS_USER_DISPATCH”，在公众平台投放过的卡券
-     * @return
+     * @return List<String>
      */
     public List<String> list(int offset, int count, List<String> statusList) {
         Map<String, Object> request = new HashMap<>();
@@ -208,8 +208,8 @@ public class Cards {
     /**
      * 设置测试使用的白名单
      *
-     * @param openIds
-     * @param userNames
+     * @param openIds openIds
+     * @param userNames userNames
      */
     public void setWhiteList(List<String> openIds, List<String> userNames) {
         Map<String, Object> request = new HashMap<>();
@@ -229,8 +229,8 @@ public class Cards {
     /**
      * 根据card id获取图文消息里面的content字段
      *
-     * @param cardId
-     * @return
+     * @param cardId cardId
+     * @return String
      */
     String getContentByCardId(String cardId) {
         Map<String, Object> request = new HashMap<>();
@@ -251,7 +251,7 @@ public class Cards {
     /**
      * 获取卡券背景颜色列表
      *
-     * @return
+     * @return List
      */
     public List<Color> listColors() {
         String url = WxEndpoint.get("url.card.colors.get");

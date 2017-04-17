@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * @borball on 3/25/2016.
+ *  on 3/25/2016.
  */
 public class OpenOAuth2sTest {
 

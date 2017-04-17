@@ -1,7 +1,7 @@
 package com.riversoft.weixin.common;
 
 /**
- * @borball on 8/14/2016.
+ *  on 8/14/2016.
  */
 public class DefaultAccessTokenHolder extends AccessTokenHolder {
 

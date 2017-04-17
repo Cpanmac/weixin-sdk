@@ -64,8 +64,8 @@ public class JsAPIs {
 
     /**
      * 创建JsAPI签名
-     * @param url
-     * @return
+     * @param url url
+     * @return JsAPISignature
      */
     public JsAPISignature createJsAPISignature(String url){
         if(jsAPITicket == null || jsAPITicket.expired()) {
@@ -94,8 +94,8 @@ public class JsAPIs {
 
     /**
      * 创建微信卡券JSAPI签名
-     * @param wxCardAPISignature
-     * @return
+     * @param wxCardAPISignature wxCardAPISignature
+     * @return WxCardAPISignature
      */
     public WxCardAPISignature createWxCardJsAPISignature(WxCardAPISignature wxCardAPISignature){
         if(wxCardAPITicket == null || wxCardAPITicket.expired()) {

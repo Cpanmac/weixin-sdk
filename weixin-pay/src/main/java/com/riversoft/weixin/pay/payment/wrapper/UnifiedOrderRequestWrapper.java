@@ -5,7 +5,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import com.riversoft.weixin.pay.payment.bean.UnifiedOrderRequest;
 
 /**
- * @borball on 1/13/2017.
+ *  on 1/13/2017.
  */
 @JacksonXmlRootElement(localName = "xml")
 public class UnifiedOrderRequestWrapper extends BaseSettings {

@@ -86,8 +86,8 @@ public class Sessions {
     /**
      * 获取客户回话状态
      *
-     * @param openId
-     * @return
+     * @param openId openId
+     * @return Session
      */
     public Session get(String openId) {
         String url = WxEndpoint.get("url.care.session.get");
@@ -101,7 +101,7 @@ public class Sessions {
      * 获取某客服人员会话列表
      *
      * @param account 客服账号
-     * @return
+     * @return List
      */
     public List<Session> getSessionsByAccount(String account) {
         String url = WxEndpoint.get("url.care.session.list.byaccount");
@@ -114,7 +114,7 @@ public class Sessions {
     /**
      * 获取未接入会话列表
      *
-     * @return
+     * @return WaitingSessions
      */
     public WaitingSessions getWaitingSessions() {
         String url = WxEndpoint.get("url.care.session.listwait");

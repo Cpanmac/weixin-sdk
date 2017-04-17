@@ -11,7 +11,7 @@ import org.junit.Test;
 import java.util.Date;
 
 /**
- * @borball on 5/15/2016.
+ *  on 5/15/2016.
  */
 public class PaymentsTest {
 

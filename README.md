@@ -1,6 +1,6 @@
 # 微信公众平台(服务号、订阅号、企业号、小程序)、微信开放平台和微信支付JAVA SDK
 
-[![Build Status](https://semaphoreci.com/api/v1/projects/5b0c7b61-9b88-4b88-95fa-ea6bbd11e495/617516/badge.svg)](https://semaphoreci.com/borball/weixin-sdk) [![](https://jitpack.io/v/borball/weixin-sdk.svg)](https://jitpack.io/#borball/weixin-sdk) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/cn.com.riversoft/weixin-sdk/badge.svg)](https://maven-badges.herokuapp.com/maven-central/cn.com.riversoft/weixin-sdk)
+[![Build Status](https://semaphoreci.com/api/v1/projects/5b0c7b61-9b88-4b88-95fa-ea6bbd11e495/617516/badge.svg)](https://semaphoreci.com/borball/weixin-sdk) [![](https://jitpack.io/v/borball/weixin-sdk.svg)](https://jitpack.io/#borball/weixin-sdk) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.zhijian/weixin-sdk/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.zhijian/weixin-sdk)
 
 
 weixin-sdk 是对微信公众平台(订阅号、服务号、企业号、小程序)、微信开放平台和微信支付的JAVA版封装：
@@ -22,7 +22,7 @@ weixin-sdk 是对微信公众平台(订阅号、服务号、企业号、小程�
  - 服务号，订阅号：
 
 	    <dependency>
-	      <groupId>cn.com.riversoft</groupId>
+	      <groupId>io.zhijian</groupId>
 	      <artifactId>weixin-mp</artifactId>
 	      <version>${weixin-sdk.version}</version>
 	    </dependency>
@@ -30,7 +30,7 @@ weixin-sdk 是对微信公众平台(订阅号、服务号、企业号、小程�
  - 企业号：
  
 	    <dependency>
-	      <groupId>cn.com.riversoft</groupId>
+	      <groupId>io.zhijian</groupId>
 	      <artifactId>weixin-qydev</artifactId>
 	      <version>${weixin-sdk.version}</version>
 	    </dependency>
@@ -38,7 +38,7 @@ weixin-sdk 是对微信公众平台(订阅号、服务号、企业号、小程�
  - 开放平台：
  
 	    <dependency>
-	      <groupId>cn.com.riversoft</groupId>
+	      <groupId>io.zhijian</groupId>
 	      <artifactId>weixin-open</artifactId>
 	      <version>${weixin-sdk.version}</version>
 	    </dependency>
@@ -46,7 +46,7 @@ weixin-sdk 是对微信公众平台(订阅号、服务号、企业号、小程�
  - 支付：
 
 	    <dependency>
-	      <groupId>cn.com.riversoft</groupId>
+	      <groupId>io.zhijian</groupId>
 	      <artifactId>weixin-pay</artifactId>
 	      <version>${weixin-sdk.version}</version>
 	    </dependency>
@@ -54,7 +54,7 @@ weixin-sdk 是对微信公众平台(订阅号、服务号、企业号、小程�
  - 小程序：
 
 	    <dependency>
-	      <groupId>cn.com.riversoft</groupId>
+	      <groupId>io.zhijian</groupId>
 	      <artifactId>weixin-app</artifactId>
 	      <version>${weixin-sdk.version}</version>
 	    </dependency>	   

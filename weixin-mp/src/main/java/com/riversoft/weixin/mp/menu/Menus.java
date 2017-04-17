@@ -43,7 +43,7 @@ public class Menus {
 
     /**
      * 创建菜单
-     * @param menu
+     * @param menu menu
      */
     public void create(Menu menu) {
         String url = WxEndpoint.get("url.menu.create");
@@ -54,8 +54,8 @@ public class Menus {
 
     /**
      * 创建个性化菜单，菜单rule不能为空
-     * @param menu
-     * @return
+     * @param menu menu
+     * @return String
      */
     public String createRuleMenu(RuleMenu menu) {
         String url = WxEndpoint.get("url.menu.create.condition");
@@ -83,7 +83,7 @@ public class Menus {
 
     /**
      * 删除个性化菜单
-     * @param menuId
+     * @param menuId menuId
      */
     public void delete(String menuId) {
         String url = WxEndpoint.get("url.menu.delete.condition");
@@ -94,7 +94,7 @@ public class Menus {
 
     /**
      * 获取default 菜单
-     * @return
+     * @return Menu
      */
     public Menu get() {
         String url = WxEndpoint.get("url.menu.get");
@@ -106,7 +106,7 @@ public class Menus {
 
     /**
      * 获取个性化菜单
-     * @return
+     * @return List
      */
     public List<RuleMenu> getRuleMenus() {
         String url = WxEndpoint.get("url.menu.get");
@@ -119,7 +119,7 @@ public class Menus {
     /**
      * 获取自定义菜单配置
      * 操蛋的微信，JSON太混乱了；本接口拒绝支持 '公众号是在公众平台官网通过网站功能发布菜单'
-     * @return
+     * @return MenuConfig
      */
     public MenuConfig getMenuConfig() {
         String url = WxEndpoint.get("url.menu.get.self");
@@ -131,7 +131,7 @@ public class Menus {
     /**
      * 获取匹配的菜单
      * @param userId 用户openId或者微信号
-     * @return
+     * @return Menu
      */
     public Menu match(String userId) {
         String url = WxEndpoint.get("url.menu.match");
@@ -144,7 +144,7 @@ public class Menus {
 
     /**
      * 获取所有的菜单，包括默认的和个性化的菜单
-     * @return
+     * @return List
      */
     public List<Menu> list() {
         String url = WxEndpoint.get("url.menu.get");

@@ -41,8 +41,8 @@ public class MpMessages {
     /**
      * 群发图文消息消息给所有人
      *
-     * @param mpNews
-     * @return
+     * @param mpNews mpNews
+     * @return long
      */
     public long mpNews(String mpNews) {
         return send(new Filter(true, null), null, "mpnews", mpNews);
@@ -51,9 +51,9 @@ public class MpMessages {
     /**
      * 群发图文消息给指定群组的人
      *
-     * @param group
-     * @param mpNews
-     * @return
+     * @param group group
+     * @param mpNews mpNews
+     * @return long
      */
     public long mpNews(int group, String mpNews) {
         return send(new Filter(false, String.valueOf(group)), null, "mpnews", mpNews);
@@ -62,9 +62,9 @@ public class MpMessages {
     /**
      * 群发图文消息给指定的人
      *
-     * @param openIds
-     * @param mpNews
-     * @return
+     * @param openIds openIds
+     * @param mpNews mpNews
+     * @return long
      */
     public long mpNews(List<String> openIds, String mpNews) {
         return send(null, openIds, "mpnews", mpNews);
@@ -73,8 +73,8 @@ public class MpMessages {
     /**
      * 群发文本消息, 所有人
      *
-     * @param text
-     * @return
+     * @param text text
+     * @return long
      */
     public long text(String text) {
         return send(new Filter(true, null), null, "text", text);
@@ -83,9 +83,9 @@ public class MpMessages {
     /**
      * 指定分组群发文本消息
      *
-     * @param group
-     * @param text
-     * @return
+     * @param group group
+     * @param text text
+     * @return long
      */
     public long text(int group, String text) {
         return send(new Filter(false, String.valueOf(group)), null, "text", text);
@@ -94,9 +94,9 @@ public class MpMessages {
     /**
      * 发文本消息给指定人
      *
-     * @param openIds
-     * @param text
-     * @return
+     * @param openIds openIds
+     * @param text text
+     * @return long
      */
     public long text(List<String> openIds, String text) {
         return send(null, openIds, "text", text);
@@ -105,10 +105,10 @@ public class MpMessages {
     /**
      * 预览文本消息
      *
-     * @param wxName
-     * @param openId
-     * @param text
-     * @return
+     * @param wxName wxName
+     * @param openId openId
+     * @param text text
+     * @return long
      */
     public long textPreview(String wxName, String openId, String text) {
         return preview(wxName, openId, "text", text);
@@ -117,8 +117,8 @@ public class MpMessages {
     /**
      * 群发语音消息，所有人
      *
-     * @param voice
-     * @return
+     * @param voice voice
+     * @return long
      */
     public long voice(String voice) {
         return send(new Filter(true, null), null, "voice", voice);
@@ -127,9 +127,9 @@ public class MpMessages {
     /**
      * 群发语音消息给指定人
      *
-     * @param openIds
-     * @param voice
-     * @return
+     * @param openIds openIds
+     * @param voice voice
+     * @return long
      */
     public long voice(List<String> openIds, String voice) {
         return send(null, openIds, "voice", voice);
@@ -138,9 +138,9 @@ public class MpMessages {
     /**
      * 群发语音消息给指定群组
      *
-     * @param group
-     * @param voice
-     * @return
+     * @param group group
+     * @param voice voice
+     * @return long
      */
     public long voice(int group, String voice) {
         return send(new Filter(false, String.valueOf(group)), null, "voice", voice);
@@ -149,10 +149,10 @@ public class MpMessages {
     /**
      * 预览语音消息
      *
-     * @param wxName
-     * @param openId
-     * @param voice
-     * @return
+     * @param wxName wxName
+     * @param openId openId
+     * @param voice voice
+     * @return long
      */
     public long voicePreview(String wxName, String openId, String voice) {
         return preview(wxName, openId, "voice", voice);
@@ -161,8 +161,8 @@ public class MpMessages {
     /**
      * 群发图片消息给所有人
      *
-     * @param image
-     * @return
+     * @param image image
+     * @return long
      */
     public long image(String image) {
         return send(new Filter(true, null), null, "image", image);
@@ -171,9 +171,9 @@ public class MpMessages {
     /**
      * 群发图片消息给指定群组的人
      *
-     * @param group
-     * @param image
-     * @return
+     * @param group group
+     * @param image image
+     * @return long
      */
     public long image(int group, String image) {
         return send(new Filter(false, String.valueOf(group)), null, "image", image);
@@ -182,9 +182,9 @@ public class MpMessages {
     /**
      * 群发图片消息给指定的人
      *
-     * @param openIds
-     * @param image
-     * @return
+     * @param openIds openIds
+     * @param image image
+     * @return long
      */
     public long image(List<String> openIds, String image) {
         return send(null, openIds, "image", image);
@@ -193,10 +193,10 @@ public class MpMessages {
     /**
      * 预览图片消息
      *
-     * @param wxName
-     * @param openId
-     * @param image
-     * @return
+     * @param wxName wxName
+     * @param openId openId
+     * @param image image
+     * @return long
      */
     public long imagePreview(String wxName, String openId, String image) {
         return preview(wxName, openId, "image", image);
@@ -205,10 +205,10 @@ public class MpMessages {
     /**
      * 群发视频消息给所有人
      *
-     * @param mediaId
-     * @param title
-     * @param desc
-     * @return
+     * @param mediaId mediaId
+     * @param title title
+     * @param desc desc
+     * @return long
      */
     public long video(String mediaId, String title, String desc) {
         return video(new Filter(true, null), null, mediaId, title, desc);
@@ -217,11 +217,11 @@ public class MpMessages {
     /**
      * 群发视频消息给特定分组的人
      *
-     * @param group
-     * @param mediaId
-     * @param title
-     * @param desc
-     * @return
+     * @param group group
+     * @param mediaId mediaId
+     * @param title title
+     * @param desc desc
+     * @return long
      */
     public long video(int group, String mediaId, String title, String desc) {
         return video(new Filter(false, String.valueOf(group)), null, mediaId, title, desc);
@@ -230,11 +230,11 @@ public class MpMessages {
     /**
      * 群发视频消息给特定用户
      *
-     * @param openIds
-     * @param mediaId
-     * @param title
-     * @param desc
-     * @return
+     * @param openIds openIds
+     * @param mediaId mediaId
+     * @param title title
+     * @param desc desc
+     * @return long
      */
     public long video(List<String> openIds, String mediaId, String title, String desc) {
         return video(null, openIds, mediaId, title, desc);
@@ -243,12 +243,12 @@ public class MpMessages {
     /**
      * 群发视频预览给特定用户
      *
-     * @param wxName
-     * @param openId
-     * @param mediaId
-     * @param title
-     * @param desc
-     * @return
+     * @param wxName wxName
+     * @param openId openId
+     * @param mediaId mediaId
+     * @param title title
+     * @param desc desc
+     * @return long
      */
     public long videoPreview(String wxName, String openId, String mediaId, String title, String desc) {
         Map<String, String> uploadRequest = new HashMap<>();
@@ -270,8 +270,8 @@ public class MpMessages {
     /**
      * 群发卡券给所有人
      *
-     * @param wxcard
-     * @return
+     * @param wxcard wxcard
+     * @return long
      */
     public long card(String wxcard) {
         return send(new Filter(true, null), null, "wxcard", wxcard);
@@ -280,9 +280,9 @@ public class MpMessages {
     /**
      * 群发卡券给指定分组的人
      *
-     * @param group
-     * @param wxcard
-     * @return
+     * @param group group
+     * @param wxcard wxcard
+     * @return long
      */
     public long card(int group, String wxcard) {
         return send(new Filter(false, String.valueOf(group)), null, "wxcard", wxcard);
@@ -291,9 +291,9 @@ public class MpMessages {
     /**
      * 群发卡券给指定的人
      *
-     * @param openIds
-     * @param wxcard
-     * @return
+     * @param openIds openIds
+     * @param wxcard wxcard
+     * @return long
      */
     public long card(List<String> openIds, String wxcard) {
         return send(null, openIds, "wxcard", wxcard);
@@ -302,10 +302,10 @@ public class MpMessages {
     /**
      * 预览图片消息
      *
-     * @param wxName
-     * @param openId
-     * @param wxcard
-     * @return
+     * @param wxName wxName
+     * @param openId openId
+     * @param wxcard wxcard
+     * @return long
      */
     public long cardPreview(String wxName, String openId, String wxcard) {
         return preview(wxName, openId, "wxcard", wxcard);
@@ -318,7 +318,7 @@ public class MpMessages {
      * 3、删除群发消息只能删除图文消息和视频消息，其他类型的消息一经发送，无法删除。
      * 4、如果多次群发发送的是一个图文消息，那么删除其中一次群发，就会删除掉这个图文消息也，导致所有群发都失效
      *
-     * @param msgId
+     * @param msgId msgId
      */
     public void delete(long msgId) {
         String url = WxEndpoint.get("url.mass.message.delete");
@@ -331,8 +331,8 @@ public class MpMessages {
     /**
      * 查询群发消息状态
      *
-     * @param msgId
-     * @return
+     * @param msgId msgId
+     * @return boolean
      */
     public boolean success(long msgId) {
         String url = WxEndpoint.get("url.mass.message.status");

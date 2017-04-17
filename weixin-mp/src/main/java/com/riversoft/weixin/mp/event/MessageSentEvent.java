@@ -47,7 +47,7 @@ public class MessageSentEvent extends EventRequest {
      * err(20013), 涉嫌版权      err(22000), 涉嫌互推(互相宣传)
      * err(21000), 涉嫌其他
      *
-     * @return
+     * @return int
      */
     public int getStatusCode() {
         //TODO

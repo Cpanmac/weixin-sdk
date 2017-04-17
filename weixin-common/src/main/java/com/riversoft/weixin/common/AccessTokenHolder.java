@@ -17,7 +17,7 @@ import java.io.IOException;
 
 /**
  * AccessToken holder
- * @borball on 8/14/2016.
+ *  on 8/14/2016.
  */
 public abstract class AccessTokenHolder {
 
@@ -77,7 +77,6 @@ public abstract class AccessTokenHolder {
 
     /**
      * 获取access token
-     * @return
      */
     public abstract AccessToken getAccessToken();
 

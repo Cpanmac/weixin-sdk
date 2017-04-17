@@ -60,6 +60,7 @@ public class JsonMapper {
 
     /**
      * 创建只输出非Null且非Empty(如List.isEmpty)的属性到Json字符串的Mapper,建议在外部接口中使用.
+     * @return JsonMapper
      */
     public synchronized static JsonMapper nonEmptyMapper() {
         if (nonEmptyJsonMapper == null) {
@@ -70,6 +71,7 @@ public class JsonMapper {
 
     /**
      * 创建只输出初始值被改变的属性到Json字符串的Mapper, 最节约的存储方式，建议在内部接口中使用。
+     * @return JsonMapper
      */
     public synchronized static JsonMapper nonDefaultMapper() {
         if (nonDefaultJsonMapper == null) {
@@ -87,6 +89,7 @@ public class JsonMapper {
 
     /**
      * 创建默认Mapper
+     * @return JsonMapper
      */
     public synchronized static JsonMapper defaultMapper() {
         if (defaultJsonMapper == null) {
@@ -99,7 +102,7 @@ public class JsonMapper {
      * 对象转换成JSON字符串
      *
      * @param object
-     * @return
+     * @return String
      */
     public String toJson(Object object) {
         try {
@@ -112,11 +115,10 @@ public class JsonMapper {
 
     /**
      * JSON转换成Java对象
-     *
-     * @param json
-     * @param clazz
-     * @param <T>
-     * @return
+     * @param json json
+     * @param clazz clazz
+     * @param <T> clazz
+     * @return clazz
      */
     public <T> T fromJson(String json, Class<T> clazz) {
         if (json == null || json.trim().length() == 0) {
@@ -134,8 +136,8 @@ public class JsonMapper {
     /**
      * JSON转换成Java对象
      *
-     * @param json
-     * @return
+     * @param json json
+     * @return HashMap
      */
     public HashMap<String, Object> json2Map(String json) {
         return fromJson(json, HashMap.class);
@@ -146,8 +148,8 @@ public class JsonMapper {
      *
      * @param object 原对象
      * @param clazz  目标类型
-     * @param <T>
-     * @return
+     * @param <T> clazz
+     * @return clazz
      */
     public <T> T convert(Object object, Class<T> clazz) {
         if (object == null) {
@@ -160,11 +162,11 @@ public class JsonMapper {
     /**
      * 如果jsons 是数组格式，则挨个转换成clazz对象返回list，否则直接尝试转换成clazz对象返回list
      *
-     * @param jsons
-     * @param clazz
-     * @param <T>
-     * @return
-     * @throws IOException
+     * @param jsons jsons
+     * @param clazz clazz
+     * @param <T> clazz
+     * @return List
+     * @throws IOException IOException
      */
     public <T> List<T> fromJsons(String jsons, Class<T> clazz) throws IOException {
         if (jsons == null || jsons.trim().length() == 0) {

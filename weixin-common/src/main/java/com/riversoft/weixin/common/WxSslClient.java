@@ -1,6 +1,5 @@
 package com.riversoft.weixin.common;
 
-import com.riversoft.weixin.common.exception.WxError;
 import com.riversoft.weixin.common.exception.WxRuntimeException;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
@@ -10,7 +9,6 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
-import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -55,6 +53,17 @@ public class WxSslClient {
 
         requestConfig = RequestConfig.custom().setSocketTimeout(10000).setConnectTimeout(30000).setConnectionRequestTimeout(30000).build();
 
+    }
+
+    public WxSslClient() {
+        try {
+            httpClient = HttpClients.createDefault();
+        } catch (Exception e) {
+            logger.error("initializing WxHttpsClient failed.", e);
+            throw new WxRuntimeException(999, e.getMessage());
+        }
+
+        requestConfig = RequestConfig.custom().setSocketTimeout(10000).setConnectTimeout(30000).setConnectionRequestTimeout(30000).build();
     }
 
     public String get(String url) {

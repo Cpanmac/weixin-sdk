@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.com.riversoft</groupId>
+    <groupId>io.zhijian</groupId>
     <artifactId>weixin-sdk</artifactId>
     <packaging>pom</packaging>
-    <version>0.9.6-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>weixin sdk pom</name>
     <description>weixin SDK POM</description>
     <url>https://github.com/borball/weixin-sdk</url>
@@ -19,14 +19,9 @@
 
     <developers>
         <developer>
-            <id>woden</id>
-            <name>woden</name>
-            <email>wodenwang@gmail.com</email>
-        </developer>
-        <developer>
-            <id>borball</id>
-            <name>borball</name>
-            <email>borball.zh@gmail.com</email>
+            <id>izhijian</id>
+            <name>zhijian</name>
+            <email>3466559@qq.com</email>
         </developer>
     </developers>
 
@@ -52,13 +47,13 @@
     </distributionManagement>
 
     <scm>
-        <url>https://github.com/borball/weixin-sdk</url>
-        <connection>scm:git:git@github.com:borball/weixin-sdk.git</connection>
-        <developerConnection>scm:git:git@github.com:borball/weixin-sdk.git</developerConnection>
+        <url>https://github.com/izhijian/weixin-sdk</url>
+        <connection>scm:git:git@github.com:izhijian/weixin-sdk.git</connection>
+        <developerConnection>scm:git:git@github.com:izhijian/weixin-sdk.git</developerConnection>
   </scm>
 
     <issueManagement>
-        <url>https://github.com/borball/weixin-sdk/issues</url>
+        <url>https://github.com/izhijian/weixin-sdk/issues</url>
     </issueManagement>
 
     <profiles>
@@ -93,8 +88,11 @@
                             </execution>
                         </executions>
                         <configuration>
+                            <source>1.7</source>
+                            <target>1.7</target>
                             <charset>UTF-8</charset>
                             <locale>zh_CN</locale>
+                            <additionalparam>-Xdoclint:none</additionalparam>
                         </configuration>
                     </plugin>
 

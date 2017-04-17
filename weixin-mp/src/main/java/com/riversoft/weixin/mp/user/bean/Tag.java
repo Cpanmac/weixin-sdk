@@ -1,7 +1,7 @@
 package com.riversoft.weixin.mp.user.bean;
 
 /**
- * @borball on 5/8/2016.
+ *  on 5/8/2016.
  */
 public class Tag {
 

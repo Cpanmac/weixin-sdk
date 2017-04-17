@@ -26,7 +26,14 @@ public class PayWxClientFactory {
 
     public WxSslClient with(PaySetting paySetting) {
         if (!wxClients.containsKey(key(paySetting))) {
-            WxSslClient wxClient = new WxSslClient(paySetting.getCertPath(), paySetting.getCertPassword());
+            WxSslClient wxClient = null;
+            if (paySetting.getCertPath() != null && paySetting.getCertPath().trim().length() > 0
+                && paySetting.getCertPassword() != null && paySetting.getCertPassword().trim().length() > 0) {
+                wxClient = new WxSslClient(paySetting.getCertPath(), paySetting.getCertPassword());
+            }
+            else {
+                wxClient = new WxSslClient();
+            }
             wxClients.putIfAbsent(key(paySetting), wxClient);
         }
 

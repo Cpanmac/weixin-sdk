@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @borball on 1/13/2017.
+ *  on 1/13/2017.
  */
 public class RefundQueryWrapper extends BaseSettings{
 

@@ -45,8 +45,8 @@ public class CareMessages {
     /**
      * 客服发送文本消息
      *
-     * @param openId
-     * @param text
+     * @param openId openId
+     * @param text text
      */
     public void text(String openId, String text) {
         text(openId, text, null);
@@ -55,8 +55,8 @@ public class CareMessages {
     /**
      * 客服发送文本消息
      *
-     * @param openId
-     * @param text
+     * @param openId openId
+     * @param text text
      * @param from   客服账号
      */
     public void text(String openId, String text, String from) {
@@ -70,8 +70,8 @@ public class CareMessages {
     /**
      * 客服发送文本消息
      *
-     * @param openId
-     * @param image
+     * @param openId openId
+     * @param image image
      */
     public void image(String openId, String image) {
         image(openId, image, null);
@@ -80,8 +80,8 @@ public class CareMessages {
     /**
      * 客服发送图片消息
      *
-     * @param openId
-     * @param image
+     * @param openId openId
+     * @param image image
      * @param from   客服账号
      */
     public void image(String openId, String image, String from) {
@@ -95,8 +95,8 @@ public class CareMessages {
     /**
      * 客服发送语音消息
      *
-     * @param openId
-     * @param voice
+     * @param openId openId
+     * @param voice voice
      */
     public void voice(String openId, String voice) {
         voice(openId, voice, null);
@@ -105,8 +105,8 @@ public class CareMessages {
     /**
      * 客服发送语音消息
      *
-     * @param openId
-     * @param voice
+     * @param openId openId
+     * @param voice voice
      * @param from   客服账号
      */
     public void voice(String openId, String voice, String from) {
@@ -120,8 +120,8 @@ public class CareMessages {
     /**
      * 客服发送video消息
      *
-     * @param openId
-     * @param video
+     * @param openId openId
+     * @param video video
      */
     public void video(String openId, Video video) {
         video(openId, video, null);
@@ -130,8 +130,8 @@ public class CareMessages {
     /**
      * 客服发送video消息
      *
-     * @param openId
-     * @param video
+     * @param openId openId
+     * @param video video
      * @param from   客服账号
      */
     public void video(String openId, Video video, String from) {
@@ -145,8 +145,8 @@ public class CareMessages {
     /**
      * 客服发送music消息
      *
-     * @param openId
-     * @param music
+     * @param openId openId
+     * @param music music
      */
     public void music(String openId, Music music) {
         music(openId, music, null);
@@ -155,8 +155,8 @@ public class CareMessages {
     /**
      * 客服发送music消息
      *
-     * @param openId
-     * @param music
+     * @param openId openId
+     * @param music music
      * @param from   客服账号
      */
     public void music(String openId, Music music, String from) {
@@ -170,8 +170,8 @@ public class CareMessages {
     /**
      * 客服发送news消息
      *
-     * @param openId
-     * @param news
+     * @param openId openId
+     * @param news news
      */
     public void news(String openId, News news) {
         news(openId, news, null);
@@ -180,8 +180,8 @@ public class CareMessages {
     /**
      * 客服发送news消息
      *
-     * @param openId
-     * @param news
+     * @param openId openId
+     * @param news news
      * @param from   客服账号
      */
     public void news(String openId, News news, String from) {
@@ -195,8 +195,8 @@ public class CareMessages {
     /**
      * 客服发送mpNews消息
      *
-     * @param openId
-     * @param mpNews
+     * @param openId openId
+     * @param mpNews mpNews
      */
     public void mpNews(String openId, String mpNews) {
         mpNews(openId, mpNews, null);
@@ -205,8 +205,8 @@ public class CareMessages {
     /**
      * 客服发送mpNews消息
      *
-     * @param openId
-     * @param mpNews
+     * @param openId openId
+     * @param mpNews mpNews
      * @param from   客服账号
      */
     public void mpNews(String openId, String mpNews, String from) {
@@ -220,8 +220,8 @@ public class CareMessages {
     /**
      * 发送卡券
      *
-     * @param openId
-     * @param cardId
+     * @param openId openId
+     * @param cardId cardId
      */
     public void card(String openId, String cardId) {
         card(openId, cardId, null);
@@ -230,8 +230,8 @@ public class CareMessages {
     /**
      * 发送卡券
      *
-     * @param openId
-     * @param cardId
+     * @param openId openId
+     * @param cardId cardId
      * @param from   客服账号
      */
     public void card(String openId, String cardId, String from) {
