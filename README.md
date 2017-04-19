@@ -59,23 +59,5 @@ weixin-sdk 是对微信公众平台(订阅号、服务号、企业号、小程�
 	      <version>${weixin-sdk.version}</version>
 	    </dependency>	   
 		
-也可以直接从Maven中央仓库获取SNAPSHOT版本。
-
-### JitPack
-
-或者使用：[JitPack](https://jitpack.io/#borball/weixin-sdk/)，比如：
-
-	<repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
-
-	<dependency>
-	    <groupId>com.github.borball.weixin-sdk</groupId>
-	    <artifactId>weixin-mp</artifactId>
-	    <version>${weixin-sdk.version}</version>
-	</dependency>
 
 
